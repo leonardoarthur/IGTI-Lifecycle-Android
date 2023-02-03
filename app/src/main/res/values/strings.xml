@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IGTI Android - Ciclo de Vida</string>
+    <string name="nao_aperte">não aperte</string>
+    <string name="aperte">Aperte</string>
 </resources>
