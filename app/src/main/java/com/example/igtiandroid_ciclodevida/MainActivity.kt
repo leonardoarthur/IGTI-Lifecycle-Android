@@ -1,8 +1,10 @@
 package com.example.igtiandroid_ciclodevida
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +15,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configurarListeners() {
-        TODO("Not yet implemented")
+        configurarlistnerBtnNovaTela()
+    }
+
+    private fun configurarlistnerBtnNovaTela() {
+        val button = findViewById<Button>(R.id.button_nao_aperte)
+        button.setOnClickListener{
+            val intent = Intent(this, AperteActivity::class.java)
+            startActivity(intent) // Vai abrir uma nova Activity em cima dessa, não finalizando ela, apenas "OnStop".
+        }
     }
 
 

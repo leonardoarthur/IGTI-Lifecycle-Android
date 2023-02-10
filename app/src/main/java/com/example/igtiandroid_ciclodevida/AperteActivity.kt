@@ -3,13 +3,23 @@ package com.example.igtiandroid_ciclodevida
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 
 class AperteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aperte)
         Log.i("on Create LOG", "OnCreate")
+        acaoBotaoVoltar()
     }
+
+    private fun acaoBotaoVoltar() {
+        val  button = findViewById<Button>(R.id.button_aperte)
+        button.setOnClickListener{
+            finish()
+        }
+    }
+
     companion object {
         private const val TAG =
             "Log teste" //pode ser inserido no campo de tag do log, para agilizar o tempo, como uma var dentro do log
